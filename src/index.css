@@ -791,8 +791,6 @@ header nav {
 .edcard:nth-child(3),
 .edcard:nth-child(4),
 .edcard:nth-child(5) {
-  border: 1px solid #e9eef5;
-  background-color: #e8edf5;
   overflow: hidden;
   border-radius: 15px;
   padding: 30px;
