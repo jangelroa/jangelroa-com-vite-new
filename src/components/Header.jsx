@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 
-function Header() {
+// eslint-disable-next-line react/prop-types
+function Header({ setTheme }) {
   const [scrolled, setScrolled] = useState(false);
+  // const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -14,13 +16,18 @@ function Header() {
   // Function to handle scroll event
   function handleScroll() {
     if (window.scrollY > 0) {
-      // header.classList.add("scrolled");
       setScrolled(true);
     } else {
-      // header.classList.remove("scrolled");
       setScrolled(false);
     }
   }
+
+  function handleToggleTheme(event) {
+    const isDarkMode = event.target.checked;
+    console.log("CHECKED", isDarkMode);
+    setTheme(isDarkMode ? "dark" : "light");
+  }
+
   return (
     // add class "scrolled" to add solid background color to header
     <header id="header" className={scrolled ? "scrolled" : ""}>
@@ -94,6 +101,8 @@ function Header() {
               type="checkbox"
               className="l toggle-checkbox"
               id="dark-mode-toggle"
+              // checked={isChecked}
+              onChange={handleToggleTheme}
             />
             <label className="toggle-label" htmlFor="dark-mode-toggle"></label>
           </div>
