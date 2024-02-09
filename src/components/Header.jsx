@@ -1,8 +1,29 @@
-// import React from "react";
+import { useState, useEffect } from "react";
 
 function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Function to handle scroll event
+  function handleScroll() {
+    if (window.scrollY > 0) {
+      // header.classList.add("scrolled");
+      setScrolled(true);
+    } else {
+      // header.classList.remove("scrolled");
+      setScrolled(false);
+    }
+  }
   return (
-    <header id="header">
+    // add class "scrolled" to add solid background color to header
+    <header id="header" className={scrolled ? "scrolled" : ""}>
       <nav className="flex container1">
         <div className="logo flex">
           <div className="logoimg">

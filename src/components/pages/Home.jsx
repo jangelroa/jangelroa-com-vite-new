@@ -1,4 +1,23 @@
 // import React from 'react'
+//
+//
+//
+//
+//
+//
+// What to do next:
+//
+// [ ] Add js.
+// [ ] Make sure Dark mode is working.
+// [ ] Check Header is looking good when scrolling.
+// [ ] Fix the mobile layout.
+//
+//
+//
+//
+//
+//
+//
 
 export default function Home() {
   return (

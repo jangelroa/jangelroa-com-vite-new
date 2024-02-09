@@ -93,14 +93,14 @@ function Footer() {
       <div className="themeauthor container flex">
         <div className="createdby">
           <h4>
-            &copy; 2023 Created by
+            &copy; 2024 Created by{" "}
             <a
               href="https://www.jangelroa.com/"
               target="_blank"
               title="jangelroa"
               rel="noreferrer"
             >
-              jangelroa.com
+              Angel Roa
             </a>
           </h4>
         </div>

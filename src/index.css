@@ -62,7 +62,8 @@ header {
 }
 
 #header.scrolled {
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: #e8edf5;
   box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
   padding: 15px;
 }
